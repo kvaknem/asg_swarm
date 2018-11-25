@@ -43,9 +43,11 @@ locals {
 а так же Айди  образа который мы собрали в первой части 
 ( посмотреть или в веб морде в разделе AMIs , или в выводе резултатов деяний в части 1 )
 
-resource "aws_launch_configuration" "as_conf" {
-  image_id      = "ami-0ef3340cffa705c4b"           <-----  оно
-  instance_type = "t2.micro"
+resource "aws_launch_configuration" "as_conf" { 
+  
+  image_id      = "ami-0ef3340cffa705c4b"           <-----  оно 
+
+  instance_type = "t2.micro" 
 
 
 
@@ -53,6 +55,8 @@ resource "aws_launch_configuration" "as_conf" {
 после чего запускаем  
 
 terraform plan -out tfplan
+
+
 terraform apply tfplan
 
 
